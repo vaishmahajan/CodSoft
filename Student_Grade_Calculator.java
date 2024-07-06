@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class Student_Grade_Calculator extends JFrame {
  private JTextField[] subject;
  private JTextField totalMark;
- private JTextField averagePercentagField;
+ private JTextField avgPercentage;
  private JTextField gradesField;
 
  public Student_Grade_Calculator() {
@@ -34,10 +34,10 @@ public class Student_Grade_Calculator extends JFrame {
   add(new JLabel("Total Marks: "));
   add(totalMark);
 
-  averagePercentagField = new JTextField(20);
-  averagePercentagField.setEditable(false);
+  avgPercentage = new JTextField(20);
+  avgPercentage.setEditable(false);
   add(new JLabel("Average Percentage: "));
-  add(averagePercentagField);
+  add(avgPercentage);
 
   gradesField = new JTextField(20);
   gradesField.setEditable(false);
@@ -59,7 +59,7 @@ public class Student_Grade_Calculator extends JFrame {
    String grades = getGrade(averagePercentage);
 
    totalMark.setText(String.valueOf(totalMarks));
-   averagePercentagField.setText(String.format("%.2f", averagePercentage) + "%");
+   avgPercentage.setText(String.format("%.2f", averagePercentage) + "%");
    gradesField.setText(grades);
   }
  }
